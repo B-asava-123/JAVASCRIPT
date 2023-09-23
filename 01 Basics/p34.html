@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>The Modulus of 2 numbers is </h1>
+
+    <button onclick="Display()">Click to calculate</button>
+    <div id="result"></div>
+    
+    <script>
+        function Display()
+        {
+            
+        var a = window.prompt("enter A");
+        var x = Number(a);
+        var b = prompt("enter B");
+        var y = Number(b);
+
+        let res;
+
+        res = x % y ;
+        document.getElementById("result").innerHTML = "<h3> the res = " +res+ "</h3>";
+        }
+    </script>
+</body>
+</html>

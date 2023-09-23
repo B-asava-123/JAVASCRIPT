@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OOJS</title>
+    </head>
+    <body>
+        <center>
+            <h1>PROTOTPE</h1>
+            <p>Protytpe keyword - is used to create a property to an constructer externally</p>
+        </center>
+        <hr>
+
+        <script>
+            function Student()
+            {
+                // local property
+                let name, gender;
+
+                // Constructer property
+                this.name = "ABCD";
+                this.gender = "Male";
+            }
+
+            let stud = new Student(); 
+            document.write("<b> Stud.name : </b>" + stud.name + "<br><br>");
+            document.write("<b> Stud.gender : </b>" + stud.gender + "<br><br>");
+        </script>
+    </body>
+</html>

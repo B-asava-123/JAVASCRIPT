@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-Basics</title>
+    </head>
+    <body>
+            <center>
+                <h1>with parameter, without return value Example</h1>
+            </center>
+            <hr>
+
+            <script>
+                function studentDetails(firstnumber,secondnumber)
+                {
+
+                    document.write(`<p>The firstnumber is = ${firstnumber}</p>`);
+                    document.write(`<p>The secondnumber is = ${secondnumber}</p>`);
+
+                    let fn = firstnumber;
+                    let sn = secondnumber;
+
+                    document.write(`<p>The firstnumber is = ${fn}</p>`);
+                    document.write(`<p>The secondnumber is = ${sn}</p>`);
+
+                    let a=firstnumber,b=secondnumber,c;
+                    c = a + b;
+
+                    document.write(`<p>The firstnumber is = ${c}</p>`);
+
+                }
+                studentDetails("100",300);
+            </script>
+        
+    </body>
+</html>

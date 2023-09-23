@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Validation</title>
+        </head>
+        <body>
+        
+            <center>
+                <h1>Email Validation</h1>
+            </center>
+            <hr>
+
+            <form onsubmit="emailvalidation(event)">
+                <label for="">Enter Mobile Number</label>
+                <input type="text" name="Mobile" id="Mobile" >
+                <h1 id="result"></h1>
+                <button type="submit">Submit</button>
+            </form>
+            <script>
+                function emailvalidation(ee)
+                {
+                    ee.preventDefault();
+                    let Mobile = document.getElementById("Mobile").value;
+                    let result =  document.getElementById("result");
+
+                    let regex = /^[6-9]\d{9}$/;
+
+                    if(Mobile.length==0)
+                        {
+                             document.getElementById("result").innerHTML = "please enter name"; 
+                             document.getElementById("result").style.color = "red"; 
+                         }
+                     else
+                         {
+                            if(regex.test(Mobile)===false)
+                            {
+                                result.innerHTML = "Invalid Mobile Number";
+                                result.style.color = "red";
+                            }
+                            else
+                            {
+                                result.innerHTML = "valid Mobile Number";
+                                result.style.color = "blue";
+                            }
+                         }
+                }
+            </script>
+        </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS-Basics</title>
+    </head>
+    <body>
+        <center>
+            <h1>Array</h1>
+        </center>
+        <hr>
+        <!-- 
+            Array -> is group of values of similiar type
+            types
+            1. Literal type(single)
+               a. array literal
+               b. array using constructor
+               c. array as constructer parameter
+            2. object array
+            3. JSON(javascript object Notation) array (Response of REST [Representation])
+         -->
+
+         <script>
+            var num = [12,2,3,33,55,66];
+            document.write(`<h3> ${num} </h3>`);
+            document.write(`<h3> ${num[3]} </h3><hr>`);
+
+            var num1 = [12,"2",3,"abc",55,66];
+            document.write(`<h3> ${num1} </h3>`);
+            document.write(`<h3> ${num1[3]} </h3><hr>`);
+
+            var num2 = ["12",2,3,"abc@gmail.com",55,66];
+            document.write(`<h3> ${num2} </h3>`);
+            document.write(`<h3> ${num2[3]} </h3><hr>`);
+
+            for(let i=0;i<num.length;i++)
+            {
+                document.write(`<h3> ${num[i]} </h3>`);
+            }
+            document.write(`<hr>`);
+            for( i=0;i<num2.length;i++)
+            {
+                document.write(`<h3> ${num2[i]} </h3>`);
+            }
+            document.write(`<hr>`);
+
+         </script>
+    </body>
+</html>

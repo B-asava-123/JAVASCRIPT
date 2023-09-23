@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <center> <h3>Infinite</h3> </center>
+        <script>
+            document.write(`<h3> isinfinite(123) = ${isFinite(123)}`);
+            document.write(`<h3> isinfinite(-123) = ${isFinite(-12.33)}`);
+            document.write(`<h3> isinfinite(12-3) = ${isFinite(12-3)}`);
+            document.write(`<h3> isinfinite(0) = ${isFinite(0)}`);
+            document.write(`<h3> isinfinite("123") = ${isFinite("123")}`);
+            document.write(`<h3> isinfinite(true) = ${isFinite(true)}<hr><br>`);
+
+            document.write(`<h3> isinfinite("be-practical") = ${isFinite("be-practical")}`);
+            document.write(`<h3> isinfinite("21/2/3") = ${isFinite("21/2/3")}`);
+            document.write(`<h3> isinfinite("true") = ${isFinite("true")}`);
+            document.write(`<h3> isinfinite(0/0) = ${isFinite(0/0)}`);
+
+            document.write(`<h3>  ${isFinite(true)}`);
+            document.write(`<h3>  ${isFinite(true)}`);
+
+        </script>
+    </body>
+</html>

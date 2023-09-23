@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <style>
+        h1{
+            margin-left: 50px;
+            font-size: 30px;
+        }
+        .form1{
+           position: relative;
+           background-color: rgb(209, 227, 227);
+           width: 400px;
+           height: 700px;
+           margin-left: 500px;
+           padding-left: 100px;
+        }
+        legend{
+            margin-left: 85px;
+        }
+        #name, #Email,#number,#number{
+            background-color: white;
+            height: 36px;
+            width: 305px;
+            border: none;
+          
+        }
+        #city{
+            background-color: white;
+            height: 40px;
+            width: 308px;
+            border: none;
+        }
+        .gender{
+            margin-top: 15px;
+        }
+        #male{
+            margin-left: 50px;
+        }
+        #button1{
+            width: 80px;
+            height: 35px;
+            color:white;
+            border: none;
+            border-radius: 10px 10px 10px 10px;
+            background-color: rgb(67, 42, 165);
+        }
+        #button2{
+            width: 80px;
+            height: 35px;
+            color:white;
+            border: none;
+            border-radius: 10px 10px 10px 10px;
+            background-color: brown;
+        }
+        #language{
+            margin-top: 30px;
+        }
+    </style>
+</head>
+    <body>
+        <div class="form1">
+        <h1>Contact Form</h1>
+            <form onsubmit="validateForm(event)">
+                <legend for="name">Full Name</legend>
+                <input type="text" name="name" id="name">
+                <p id="nameResult"></p> 
+                <legend for="Email">Enter Email</legend>
+                <input type="text" name="Email" id="Email">
+                <p id="emailResult"></p> 
+                <legend for="number">Mobile Number</legend>
+                <input type="text" name="number" id="number">
+                <p id="numberResult"></p> 
+                <legend for="city">City</legend>
+                <select name="city" id="city">
+                    <option value="JP Nagar">JP Nagar</option>
+                    <option value="Basaveshwarnagar">Basaveshwarnagar</option>
+                    <option value="Yelhanka">Yelhanka</option>
+                    <option value="Rajanukunte">Rajanukunte</option>
+                    <option value="M G Road">M G Rode</option>
+                </select>
+                <legend for="gender" class="gender">Gender</legend>
+                <input type="radio" name="gender" value="male" id="male">Male
+                <input type="radio" name="gender" value="female" id="female">Female
+                <p id="genderResult"></p> 
+                <legend for="languages" id="language">Languages</legend>
+                <input type="checkbox" name="languages" value="Kannada" id="Kannada">Kannada
+                <input type="checkbox" name="languages" value="English" id="English">English
+                <input type="checkbox" name="languages" value="Hindi" id="Hindi">Hindi
+                <input type="checkbox" name="languages" value="Tamil" id="Tamil">Tamil <br>
+                <input type="checkbox" name="languages" value="Telugu" id="Telugu">Telugu
+                <p id="languagesResult"></p>
+                <h1 id="result"></h1>
+                <button type="submit" id="button1">Submit</button>
+                <button type="reset" id="button2">Reset</button>
+            </form>
+        </div>
+
+        <script>
+            function validateForm(e) {
+                e.preventDefault();
+                validateName();
+                validateEmail();
+                validateMobileNumber();
+                validateGender();
+                validateLanguages();
+            }
+
+            function validateName() {
+                let name = document.getElementById("name").value;
+                let nameResult = document.getElementById("nameResult");
+
+                if (name.length === 0) {
+                    nameResult.innerHTML = "Please enter a name";
+                    nameResult.style.color = "red";
+                } else {
+                    nameResult.innerHTML = "Valid Name";
+                    nameResult.style.color = "blue";
+                    document.getElementById("result").innerHTML = `Name = ${name}`;
+                }
+            }
+
+            function validateEmail() {
+                let Email = document.getElementById("Email").value;
+                let emailResult = document.getElementById("emailResult");
+                let regexEmail = /^\S+@\S+\.\S+$/;
+
+                if (Email.length === 0) {
+                    emailResult.innerHTML = "Please enter an email";
+                    emailResult.style.color = "red";
+                } else {
+                    if (regexEmail.test(Email) === false) {
+                        emailResult.innerHTML = "Invalid Email";
+                        emailResult.style.color = "red";
+                    } else {
+                        emailResult.innerHTML = "Valid Email";
+                        emailResult.style.color = "blue";
+                        document.getElementById("result").innerHTML = `Email = ${Email}`;
+                    }
+                }
+            }
+
+            function validateMobileNumber() {
+                let number = document.getElementById("number").value;
+                let numberResult = document.getElementById("numberResult");
+                let regexNumber = /^[6-9]\d{9}$/;
+
+                if (number.length === 0) {
+                    numberResult.innerHTML = "Please enter a mobile number";
+                    numberResult.style.color = "red";
+                } else {
+                    if (regexNumber.test(number) === false) {
+                        numberResult.innerHTML = "Invalid Mobile Number";
+                        numberResult.style.color = "red";
+                    } else {
+                        numberResult.innerHTML = "Valid Mobile Number";
+                        numberResult.style.color = "blue";
+                        document.getElementById("result").innerHTML = `number = ${number}`;
+                    }
+                }
+            }
+
+            function validateGender() {
+                let male = document.getElementById("male");
+                let female = document.getElementById("female");
+                let genderResult = document.getElementById("genderResult");
+
+                if (!male.checked && !female.checked) {
+                    genderResult.innerHTML = "Please select a gender";
+                    genderResult.style.color = "red";
+                } else {
+                    genderResult.innerHTML = "Gender selected";
+                    genderResult.style.color = "blue";
+                }
+            }
+
+            function validateLanguages() {
+                let Kannada = document.getElementById("Kannada");
+                let English = document.getElementById("English");
+                let Hindi = document.getElementById("Hindi");
+                let Tamil = document.getElementById("Tamil");
+                let Telugu = document.getElementById("Telugu");
+                let languagesResult = document.getElementById("languagesResult");
+
+                if (!Kannada.checked && !English.checked && !Hindi.checked && !Tamil.checked && !Telugu.checked) {
+                    languagesResult.innerHTML = "Please select at least one language";
+                    languagesResult.style.color = "red";
+                } else {
+                    languagesResult.innerHTML = "Languages selected";
+                    languagesResult.style.color = "blue";
+                }
+            }
+        </script>
+    </body>
+</html>

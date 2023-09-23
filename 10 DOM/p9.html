@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM</title>
+    </head>
+    <body>
+        <center>
+            <h1>DOM</h1>
+        </center>
+        <hr>
+
+        <ul>
+            <li>Bread</li>
+            <li class="tick">Coffe</li>
+            <li>Cake</li>
+        </ul>
+        
+        <ul>
+            <li>Bread</li>
+            <li class="tick">Coffe</li>
+            <li>Cake</li>
+        </ul>
+
+        <script>
+            let match1 = document.querySelector("#test");
+            document.write(`<p>querySelector() result : ${match1}</p>`);
+            document.write("<p><b>match1.length : </b></p>" + match1.length);
+
+            let match2 = document.querySelectorAll("li.teck");
+            document.write(`<p>querySelectorAll() result : ${match2}</p>`);
+            document.write("<p><b>match1.length : </b></p>" + match2.length);
+
+            match2[0].style.testDecoration = "line-through";
+            match2[1].style.testDecoration = "underline";
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                background-color: aqua;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+
+        <center>
+         object Array
+        </center>
+         <hr>
+
+         <script>
+            let users = [
+                {
+                    id:1,
+                    name:"sagr",
+                    email:"abc@gmail.com",
+                    age:21
+                },
+                {
+                    id:2,
+                    name:"Raam",
+                    email:"abc@gmail.com",
+                    age:10
+                },
+                {
+                    id:3,
+                    name:"Bing",
+                    email:"abc@gmail.com",
+                    age:30
+                },
+                {
+                    id:4,
+                    name:"Joey",
+                    email:"abc@gmail.com",
+                    age:31
+                }
+            ];
+
+            document.write(`<p>ussers Array : ${users}`);
+            document.write(`<p>ussers Array[0] : ${users[0]}</p>`); 
+            document.write(`<p>ussers Array[0] : ${users[1]}</p>`); 
+            document.write(`<p>ussers.id : ${users.id}</p>`); 
+            document.write(`<p>ussers.name : ${users.name}</p>`); 
+            document.write(`<p>ussers.email : ${users.email}</p>`); 
+            document.write(`<p>ussers.age : ${users.age}</p>`);  
+            document.write(`<br>`);    
+
+            for(let i = 0; i<users.length; i++)
+            {
+                document.write(`<h2>id : ${users[i].id}</h2>`);
+                document.write(`<h2>id : ${users[i].name}</h2>`);
+                document.write(`<h2>id : ${users[i].email}</h2>`);
+                document.write(`<h2>id : ${users[i].age}</h2>`);
+            }
+
+            document.write(`<h2>Example 1</h2>`);
+
+            users.forEach(element => {
+
+                document.write(element, "<hr>");
+                document.write(element.id, "<hr>");
+                document.write(element.name, "<hr>");
+                document.write(element.email, "<hr>");
+                document.write(element.age, "<hr>");
+            });
+
+            document.write(`<h2>Example 2</h2>`);
+
+            users.forEach(function(items){
+                document.write(items, "<hr>");
+                document.write(items.id, "<hr>");
+                document.write(items.name, "<hr>");
+                document.write(items.email, "<hr>");
+                document.write(items.age, "<hr>");
+            });
+        
+         </script>
+    </body>
+</html>

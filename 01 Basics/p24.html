@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color: pink;
+            margin: 100px;
+            padding: 50px;
+
+        }
+        .abcd{
+            background-color: darksalmon;
+            padding: 10px;
+            margin: 10px;
+            margin-right: 10px;
+        }
+
+
+        .Raam {
+            padding-right: 45px;
+            font-weight: bold;
+            font-size: large;
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-style: italic;
+        }
+        .Raam1 {
+            padding-right: 20px;
+            font-weight: bold;
+            font-size: large;
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-style: italic;
+        }
+        #button {
+            background-color: aqua;
+            color: red;
+            font-style: italic;
+            font-size: medium;
+            border-radius: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="dfunction(event)" class="abcd">
+        <label for="" class="Raam">FirstNumber &nbsp;</label>
+        <input type="number" name="FirstNumber"  id="first" required >
+        <br><br>
+        <label for="" class="Raam1">SecondNumber &nbsp;</label>
+        <input type="number" name="SecondNumber"  id="second" required >
+        <br> <br>
+        <button type="submit" id="button">Perform Operation</button>
+        <p class="Raam" id="res">The Result is:</p>
+    </form>
+
+    <script>
+        function dfunction(event) {
+            event.preventDefault(); // Prevent the form from submitting and page reloading
+
+            var a = document.getElementById('first').value;
+            var b = document.getElementById('second').value;
+
+            var x = Number(a);
+            var y = Number(b);
+            var res ;
+
+            res = x / y;
+            document.getElementById('res').innerHTML = `The Result is: ${res}`;
+        }
+    </script>
+</body>
+</html>

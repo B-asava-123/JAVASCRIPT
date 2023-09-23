@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Condition Statments</h1>
+    </center>
+    <hr>
+
+    <ol>
+        <li>Simple IF</li>
+        <li>If else</li>
+        <li>If Else Ladder</li>
+        <li>Switch Case</li>
+    </ol>
+    <hr>
+
+    <script>
+        let key = prompt("enter the number:");
+
+        switch(key){
+            case "one": document.write(`<h1> case 1 called </h1>`);
+            break;
+            case "two": document.write(`<h1> case 2 called </h1>`);
+            break;
+            case "three": document.write(`<h1> case 3 called </h1>`);
+            break;
+            case "four": document.write(`<h1> case 4 called </h1>`);
+            break;
+            default: document.write(`<h1> check your input </h1>`);
+        }
+
+        if(key === "one"){
+            document.write(`<h1> case 1 called </h1>`);
+        }else if(key === "two"){
+            document.write(`<h1> case 1 called </h1>`);
+        }
+        else if(key === "three"){
+            document.write(`<h1> case 1 called </h1>`);
+        }else{
+            document.write(`<h1> check your input </h1>`);
+        }
+    </script>
+</body>
+</html>

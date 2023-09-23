@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let firstnumber = 10;
+        let secondnumber = 20;
+        let thirdnumber = 20;
+        let fourthnumber = 10;
+
+
+        document.writeln(`Comparsion Operator`);
+        document.writeln(`<h3>Bitwise AND : Both conditions Must be true</h3>`);
+        document.writeln(`<h3>Here first condition and second condition  not equal hence it is false</h3>`);
+
+        if(firstnumber==secondnumber & thirdnumber==fourthnumber){
+            document.write(`<p>AND =  ${true}</p><hr>` );
+        }
+        else{
+            document.write(`<p>AND =  ${false}</p><hr>` );
+        }
+
+        let firstnumber1 = 10;
+        let secondnumber1 = 20;
+        let thirdnumber1 = 20;
+        let fourthnumber1 = 33;
+
+        document.writeln(`<h3>Bitwise OR : Either one conditions Must be true</h3>`);
+        document.writeln(`<h3>Here first condition and second condition  not equal hence it is false</h3>`);
+
+        if(firstnumber1==secondnumber1 | thirdnumber1==fourthnumber1){
+            document.write(`<p>OR =  ${true}</p><hr>` );
+        }
+        else{
+            document.write(`<p>OR =  ${false}</p><hr>` );
+        }
+
+        let firstnumber2 = 10;
+        let secondnumber2 = 10;
+        let thirdnumber2 = 20;
+        let fourthnumber2 = 20;
+
+        document.writeln(`<h3>Bitwise XOR : Either Any conditions Must be true</h3>`);
+        document.writeln(`<h3>Here first condition and second condition  not equal hence it is false</h3>`);
+
+        if(firstnumber2==secondnumber2 ^ thirdnumber2==fourthnumber2){
+            document.write(`<p>XOR =  ${true}</p><hr>` );
+        }
+        else{
+            document.write(`<p>XOR =  ${false}</p><hr>` );
+        }
+
+        let firstNumber = 100;
+        let lastNumber = 300;
+        document.write(`<h2>Bitwise Left Shift</h2>`);
+    if(firstNumber<<secondnumber){
+        document.write(`<h3>Result : ${true}</h3>`);
+    }else{
+        document.write(`<h3>Result : ${false}</h3><hr>`);
+    }
+    document.write(`<h2>Bitwise Right Shift</h2>`);
+    if(firstNumber>>lastNumber){
+        document.write(`<h3>Result : ${true}</h3>`);
+    }else{
+        document.write(`<h3>Result : ${false}</h3><hr>`);
+    }
+    document.write(`<h2>Bitwise Right Shift with Zero</h2>`);
+    if(firstNumber>>>lastNumber){
+        document.write(`<h3>Result : ${true}</h3>`);
+    }else{
+        document.write(`<h3>Result : ${false}</h3><hr>`);
+    }
+    </script>
+</body>
+</html>

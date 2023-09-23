@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+</head>
+<body>
+    <center>
+        <h1>Datatype Conversion</h1>
+    </center>
+    <hr>
+
+    <script>
+        let str = "123";
+        document.writeln(typeof(str) +"</br>");
+
+        let num = Number(str);
+        document.write(typeof num +"<hr>" );
+
+        var number1 = Number("10.5");
+        document.write(typeof(number1)+"<br>");
+
+        var x = "123.33";
+        var y = "1234.333333333333333";
+        var z = 'Apple';
+        var z1 = 122.2;
+
+        document.write(" datatype of x is="+typeof(x)+"<br>" );
+        document.write(" datatype of y is="+typeof(y)+"<br>" );
+        document.write(" datatype of z is="+typeof(z)+"<br>" );
+
+        var a = Number(x);
+        document.write(`<h3> Number = ${a}`);
+        
+        var a1 = parseInt(y);
+        document.write(`<h3> Number = ${a1}`);
+
+        var c = parseFloat(z1);
+        document.write(`<h3> C is = ${c}`);
+
+        let yy = 12345.66767766776;
+        document.write(`<h3> yy variable is = ${yy} </h3>`);
+        document.write(`<h3> yy variable is = ${yy.toFixed()} </h3>`);
+        document.write(`<h3> yy variable is = ${yy.toFixed(1)} </h3>`);
+        document.write(`<h3> yy variable is = ${yy.toFixed(2)} </h3>`);
+        document.write(`<h3> yy variable is = ${yy.toFixed(3)} </h3>`);
+        document.write(`<h3> yy variable is = ${yy.toFixed(4)} </h3>`);
+
+
+       
+
+        s1=Number(true)
+        s2=Number(false)
+        s3=Number(null)
+        s4=Number(" 123 ")
+        s5=Number(" ")
+        s6=Number("")
+        s7= Number("123e-1")
+        s8=Number("0xFF")
+        s9=Number("undefined")
+        s10=Number("null")
+        s11=Number("Hello World")
+
+        document.write(`${s1}<br>`);
+        document.write(`${s2}<br>`);
+        document.write(`${s3}<br>`);
+        document.write(`${s4}<br>`);
+        document.write(`${s5}<br>`);
+        document.write(`${s6}<br>`);
+        document.write(`${s7}<br>`);
+        document.write(`${s8}<br>`);
+        document.write(`${s9}<br>`);
+        document.write(`${s10}<br>`);
+        document.write(`${s11}<br>`);
+        
+        
+    </script>
+</body>
+</html>

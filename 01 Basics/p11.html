@@ -1,0 +1,52 @@
+<html> 
+<head>
+<meta charset=utf-8 />
+<title>JS-Basics </title>
+</head>
+<body>
+        
+        <form>
+            1st Number : <input type="text" id="firstNumber" /><br>
+            2nd Number: <input type="text" id="secondNumber" /><br>
+            <input type="button" onClick="calculate(1)" Value="Add" /><br>
+            <input type="button" onClick="calculate(2)" Value="Subtract" /><br>
+            <input type="button" onClick="calculate(3)" Value="Multiply" /><br>
+            <input type="button" onClick="calculate(4)" Value="Divide" /><br>
+        </form>
+     
+        <p>The Result is : <br>
+            <span id="result"></span>
+        </p>
+     
+     
+        <script>
+            function calculate(x)
+            {
+                
+              num1 = document.getElementById(
+                "firstNumber").value;
+              num2 = document.getElementById(
+                "secondNumber").value;
+                switch(x) {
+                    case 1:
+                    result = parseInt(num1) + parseInt(num2);
+                        break;
+                    case 2:
+                    result = parseInt(num1) - parseInt(num2);
+                        break;
+                    case 3:
+                    result = parseInt(num1) * parseInt(num2);
+                        break;
+                    case 4:
+                    result = parseInt(num1) / parseInt(num2);
+                        break;
+                    }
+                
+              document.getElementById("result").innerHTML = result;
+                
+            }
+         
+        </script>
+   
+</body>
+</html>

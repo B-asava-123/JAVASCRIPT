@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Validation</title>
+        </head>
+        <body>
+        
+            <center>
+                <h1>Email Validation</h1>
+            </center>
+            <hr>
+
+            <form onsubmit="emailvalidation(event)">
+                <label for="">Enter Email</label>
+                <input type="text" name="Email" id="Email" >
+                <h1 id="result"></h1>
+                <button type="submit">Submit</button>
+            </form>
+
+            
+        
+            <script>
+                function emailvalidation(ee)
+                {
+                    ee.preventDefault();
+                    let Email = document.getElementById("Email").value;
+                    let result =  document.getElementById("result");
+
+                    let regex = /^\S+@\S+\.\S+$/;
+
+                    if(Email.length==0)
+                        {
+                             document.getElementById("error").innerHTML = "please enter name"; 
+                             document.getElementById("error").style.color = "red"; 
+                        }
+                     else
+                         {
+                            if(regex.test(Email)===false)
+                            {
+                                result.innerHTML = "Invalid Email";
+                                result.style.color = "red";
+                            }
+                            else
+                            {
+                                result.innerHTML = "valid Email";
+                                result.style.color = "blue";
+                            }
+                         }
+                }
+            </script>
+        </body>
+</html>

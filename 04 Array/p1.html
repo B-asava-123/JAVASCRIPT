@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <style>
+        body{
+            background-color: bisque;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>ARRAY</h1>
+        <p>collection of data</p>
+    </center>
+
+    <hr>
+
+    <h2>By Array Literal</h2>
+
+    <script>
+        let color = ["red","blue","orange","white",100];
+
+        document.write(typeof(color)+"<br>");
+        document.write(color+"<br>");
+
+        document.write("<hr>");
+        document.write("color length = ", color.length + "<br>");
+        document.write("First Index value =",color[0]+"<br>");
+        document.write("First Index value =",color[1]+"<br>");
+        document.write("<hr>");
+        
+        for (let index = 0; index < color.length; index++) {
+            document.write(color[index]+ "<br>"); 
+        }
+    </script>
+
+    <hr>
+
+    <center>
+        <h1>By creating instance of Array object or constructor directly (using new keyword)</h1>
+    </center>
+    <hr>
+
+    <script>
+        let empName = new Array();
+        document.write("emName = ",typeof(empName),"<br>");
+
+        empName[0] = "nandan";
+        empName[1] = "arun";
+        empName[2] = "bharath";
+        empName[3] = "vikas";
+        empName[4] = "patil";
+        empName[5] = "batgi";
+        empName[6] = "sham";
+        empName[7] = "raam";
+
+
+        for (let index = 0; index < empName.length; index++) {
+            document.write(empName[index]+ "<br>");
+        }
+    </script>
+
+    <hr>
+    <center>
+        <h1>By creating an Array object or constructor parameter (using new keyword)</h1>
+    </center>
+    <hr>
+
+    <script>
+        let student = new Array("nandan","arun","bharath","vikas");
+        document.write("emName = ",typeof(empName),"<br>");
+
+        for (let index = 0; index < student.length; index++) {
+            document.write(student[index]+ "<br>");
+        }
+    </script>
+
+</body>
+</html>

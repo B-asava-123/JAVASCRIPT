@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            document.write(`<h1>Function Defining..!  (Local function)</h1>`);
+            function sum(a,b)
+            {
+                return a+b;
+            }
+            document.write(`<h3> sum = ${sum(12,12)}</h3>`);
+
+            document.write(`<h3> Function Expression..!</h3>`);
+
+            let fullname = function(firstnumber,secondnumber)
+            {
+                return firstnumber + " " + secondnumber;
+            }
+            document.write(`<h3> Fullname : ${fullname("Virat" , "Kohli")}<hr>`)
+
+            document.writeln("Arrow Function");
+
+            let js = () => {
+                document.write("Heloo Virat:<hr>");
+            }
+            js();
+
+
+            let JS1 = (a,b) => {
+                return a+b;
+            }
+            document.writeln(`<h1> sum is:${JS1(12,12)}`);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Array</title>
+        <style>
+            body{
+                background-color: bisque;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <h1>Array Methods</h1>
+        </center>
+        <hr>
+
+        <h2>Removing Elements from  Array</h2>
+        <hr>
+
+        <script>
+            document.write("<h4>Array ..!</h4>");
+            let colors = ["red","green","black","yellow"];
+            document.write("Array=",colors + "<br>");
+            document.write("Array Length =",colors.length+ "<br><hr>");
+
+
+            document.write("<h4> Adding new elements at the End </h4>");
+            let first = colors.shift();
+            document.write("Array=",first + "<br>");
+            document.write("Array Length =",colors.length+ "<br><hr>");
+
+            document.write("<h4> Adding new elements at the End </h4>");
+            let second = colors.pop();
+            document.write("Array=",second + "<br><hr>");
+            document.write("Array Length =",colors.length+ "<br>");
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM</title>
+    </head>
+    <body>
+        <center>
+            <h1>.innerhtml and .innertext</h1>
+        </center>
+        <hr>
+
+        <div id="blk1"></div>
+        <div id="blk2"></div>
+        <hr>
+
+         <marquee behavior="" direction="" id="txt"> <h2 id="txt1"></h2></marquee>
+        <hr>
+
+        <script>
+            document.getElementById("blk1").innerHTML='<h1> this is inner html content </h1>';
+            document.getElementById("blk2").innerText='<h1> this is inner html content </h1>';
+
+            document.getElementById("txt1").innerHTML = "<h1> Hello Javascript </h1>";
+            document.getElementById("txt1").style.backgroundColor = "red";
+            document.getElementById("txt1").style.color = "whte";
+            document.getElementById("txt1").style.textAlign = "center";
+            document.getElementById("txt1").style.padding = "10px"; 
+            document.getElementById("txt").style.padding = "10px"; 
+        </script>
+    </body>
+</html>

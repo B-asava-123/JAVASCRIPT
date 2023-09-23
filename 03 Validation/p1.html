@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Validation</title>
+    </head>
+    <body>
+        <center>
+            <h1>USERNAME VALIDATION</h1>
+        </center>
+        <hr>
+
+        <form onsubmit="validation(event)" autocomplete="off">
+            <label for="">Enter User Name</label>
+            <input type="text" placeholder="username" id="username" name="username" minlength="0" maxlength="15">
+            <strong id="error"></strong>
+            <button type="submit">SUBMIT</button>
+        </form> 
+        <script>
+             
+             function validation(e)
+             {
+                e.preventDefault();
+                let user = document.getElementById("username").value;
+
+                  if(user.length==0)
+                        {
+                             document.getElementById("error").innerHTML = "please enter name"; 
+                             document.getElementById("error").style.color = "red"; 
+                         }
+                  else if(user.length < 5 ) 
+                        {
+                            document.getElementById("error").innerHTML = "please enter Minimum character";  
+                            document.getElementById("error").style.color = "blue"; 
+                        } 
+                  else if(user.length > 5 && user.length < 8)
+                        {
+                            document.getElementById("error").innerHTML = "valid name";  
+                            document.getElementById("error").style.color = "blue"; 
+                        } 
+                  else if(user.length > 10) 
+                        {
+                        document.getElementById("error").innerHTML = "please enter maximum shoud be less  10 character";  
+                        document.getElementById("error").style.color = "green"; 
+                        }
+             } 
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOJS</title>
+</head>
+<body>
+    <center>
+        <h1>Javascript Object</h1>
+    </center>
+    <hr>
+
+    <ol>
+        <li>
+            Literal type(Single)
+            <ul>
+                <li>object literal</li>
+                <li>Creating instance of object directly (using constructer method)</li>
+                <li>using an object constructer (using constructer parameter)</li>
+            </ul>
+        </li>
+        <li>object array</li>
+        <li>JSON (javascript object notation) array (Responsive of REST [Representational state transfer])</li>
+    </ol>
+
+    <hr><hr>
+
+    <center>
+        <h1>Literal Object</h1>
+        <p>Key:value => property of sn object</p>
+    </center>
+    <p><strong>SYNTAX : </strong></p>
+    <pre>
+        let literalObjectName = {
+            "key1":"value1";
+            "key2":"value2";
+            "key3":"value3";
+            "key4":"valueN";
+        };
+
+        console.log(literalObjectName);
+        console.log(typeof(literalObjectName));
+        console.log(literalObjectName.key1);
+    </pre>
+    <hr>
+
+    <script>
+
+        let test = "hello";
+        document.write(`<h3>Typeof test = ${typeof(test)}</h3>`);
+        document.write(`<h3>test = ${test}</h3>`);
+
+        let car ={
+            'model': 2022,
+            "color":"red",
+            "brand":"audi",
+            "company":"AUDI",
+            "isRunnable":true,
+        };
+        document.write(`<h3>CAR = ${car}`);
+        document.write(`<h3>CAR TYPEOF= ${typeof car}`);
+        document.write(`<h3>CAR MODEL= ${car.model}`);
+        document.write(`<h3>CAR color= ${car.color}`);
+        document.write(`<h3>CAR brand= ${car.brand}`);
+        document.write(`<h3>CAR company= ${car.company}`);
+        document.write(`<h3>CAR isRunnable= ${car.isRunnable}`);
+    </script>
+</body>
+</html>

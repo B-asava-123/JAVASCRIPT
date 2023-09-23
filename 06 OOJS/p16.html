@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OOJS</title>
+    </head>
+    <body>
+        <center>
+            <h1>write protect the values</h1>
+        </center>
+        <hr>
+
+        <script>
+          
+          var user ={};
+
+          Object.defineProperties(user, {
+            name:{
+                value: "raju",
+                writable: true
+            },
+            email:{
+                value: "raju@gmail.com",
+                writable: false
+            },
+            mobile:{
+                value: "21211221",
+                writable: true
+            }
+          });
+
+          console.log('before user =', user);
+
+          user.name = "rtaj kumar";
+          user.email = "raj12u@gmail.com";
+          user.mobile = "545456686554454";
+
+          console.log('after user =', user);
+
+          document.write(`<h1> name = ${user.name} </h1>`);
+          document.write(`<h1> email = ${user.email} </h1>`);
+          document.write(`<h1> mobile = ${user.mobile} </h1>`);
+        </script>
+    </body>
+</html>

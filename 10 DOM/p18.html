@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM</title>
+    </head>
+    <body>
+        <center>
+            <h1>document.cookie</h1>
+        </center>
+        <hr>
+
+        <button onclick="setcookie()">Set Cookie</button>
+        <button onclick="viewcookie()">View Cookie</button>
+        <button onclick="resetcookie()">Clear Cookie</button>
+
+        <h3 id="output"></h3>
+
+        <script>
+            function setcookie() {
+                let id="sagar";
+                document.cookie = `User ID = ${id}; expires = Tue sep 12 2023 14:59:10 GMT+0530; secure = true`;
+            }
+            function viewcookie() {
+                if(document.cookie.length!=0)
+                {
+                   document.getElementById("output").innerHTML = document.cookie;
+                }
+                else{
+                    alert("Cookie not avaiable.");
+                }
+            }
+            function resetcookie() {
+                if (document.cookie = "user ID=sagar"){
+                    document.getElementById("output").innerHTML = "";
+                    window.location.resetcookie();
+                }
+            }
+        </script>
+    </body>
+</html>

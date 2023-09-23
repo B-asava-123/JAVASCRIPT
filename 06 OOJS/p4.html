@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>OOJS</title>
+    </head>
+    <body>
+        <center>
+            <h1>By using an object constructor (constructor parameter) </h1>
+        </center>
+        <hr>
+
+        <h3>Example-1</h3>
+        <script>
+            let empdeatails = new Object(
+                {
+                    fname:"tejas",
+                    lname:"gg",
+                    fullname : function(){
+                        return this.fname +" "+this.lname
+                    }
+                });
+
+                document.write(typeof empdeatails + "<br>");
+                document.write(empdeatails.fname + "<br>");
+                document.write(empdeatails.lname + "<br>");
+                document.write(empdeatails.fullname() + "<br>");
+        </script>
+
+        <hr>
+        <h3>Example-2</h3>
+        <script>
+            function studentdeatails(firstname, lastname)
+            {
+                document.write('firstname =', firstname +"<br>");
+                document.write('secondname =', lastname+"<hr>");
+
+                let fn, ln, fullname;
+
+                this.fn = firstname;
+                this.ln = lastname;
+
+                this.fullname = fn + " " + ln;
+
+                document.write('fn =', fn+"<br>");
+                document.write('ln =', ln+"<hr>");
+
+                document.write(fullname);
+            }
+            let stud = new studentdeatails("html", "html-5");
+            document.write(typeof stud+"<hr>");
+
+            document.write('this.fn =', stud.fn+"<br>");
+            document.write('this.ln =', stud.ln+"<hr>");
+        </script>
+    </body>
+</html>

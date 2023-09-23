@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=, initial-scale=1.0">
+        <title>DOM</title>
+    </head>
+    <body>
+        <section id="blk"></section>
+
+        <hr>
+        <button type="button" onclick="addContent()">Add Block</button>
+        <button type="button" onclick="removeContent()">Remove Content</button>
+
+        <script>
+            function addContent()
+            {
+                let content = `<h1> Welcome to jss </h1>
+                               </h2> sub titlw of js </h2>
+                               <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quasi totam nemo natus pariatur, quis sint provident officiis ratione perspiciatis, maxime necessitatibus laudantium impedit eos in? Ullam explicabo molestias praesentium. </p>
+                               <button type="button" onclick="removeContent()">Remove Content</button>`
+
+                document.getElementById("blk").innerHTML = content;
+            }
+            function removeContent()
+            {
+             
+                document.getElementById("blk").innerHTML = "";
+            }
+        </script>
+    </body>
+</html>

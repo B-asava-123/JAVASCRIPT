@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Js-Basics</title>
+    </head>
+    <body>
+
+        <video src="assets/Media/video File/vv2.mp4" height="200" id="videofile"></video>
+
+        <hr>
+        <button onclick="playHandler()">play</button>
+        <button onclick="pauseHandler()">pause</button>
+        <button onclick="Fullscreen()">Fullscreen</button>
+
+        <script>
+            function playHandler()
+            {
+                document.getElementById("videofile").play();
+            }
+            function pauseHandler()
+            {
+                document.getElementById("videofile").pause();
+            }
+            function Fullscreen()
+            {
+                document.getElementById("videofile").requestFullscreen();
+            }
+        </script>
+        
+    </body>
+</html>

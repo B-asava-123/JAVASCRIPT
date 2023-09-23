@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <center>
+            <h1>Keyboard event</h1>
+        </center>
+        <hr>
+
+        <!-- 
+            events
+            onkeypress => deprecated, will have one key of delay
+            onkeydown => will have one key of delay
+            onkeyup => no delay
+         -->
+
+        <label for="">Enter Name</label>
+        <input type="text" name="name" id="name" onkeypress="printf()">
+
+        <h3 id="result"></h3>
+
+        <script>
+            function printf()
+            {
+                document.getElementById("result").innerHTML = document.getElementById("name").value;
+            }
+        </script>
+        
+    </body>
+</html>

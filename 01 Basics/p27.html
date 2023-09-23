@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <center>
+            <h1>with parameter, with return value Example</h1>
+        </center>
+
+        <script>
+            function Dfunction(firstnumber,secondnumber)
+            {
+
+                document.write(`<p>The firstnumber is = ${firstnumber}</p>`);
+                    document.write(`<p>The secondnumber is = ${secondnumber}</p>`);
+
+                    let fn = firstnumber;
+                    let sn = secondnumber;
+
+                    document.write(`<p>The firstnumber is = ${fn}</p>`);
+                    document.write(`<p>The secondnumber is = ${sn}</p>`);
+
+                    let a=fn,b=sn,c;
+                    c = a + b;
+            
+                    // document.write(`<p>The firstnumber is = ${c}</p>`);
+                    return c;
+            }
+            document.write(Dfunction(122,122));
+        </script>
+    </body>
+</html>

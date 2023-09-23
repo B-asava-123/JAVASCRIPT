@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BOM</title>
+    </head>
+    <body>
+        <script>
+            function geturl()
+            {
+                alert("the url of this page is:"+ window.location.href);
+            }
+        </script>
+        <button type="button" onclick="geturl();">Get URL Page</button>
+       <br> <hr>
+        <script>
+            document.writeln(" <br> protocol = "+ window.location.protocol + "<hr>");
+            document.writeln("<br> port = "+ window.location.port + "<hr>");
+            document.writeln("<br> host = "+ window.location.host + "<hr>");
+            document.writeln("<br> hostname = "+ window.location.hostname + "<hr>");
+            document.writeln("<br> pathname = "+ window.location.pathname + "<hr>");
+            
+        </script>
+        
+    </body>
+</html>

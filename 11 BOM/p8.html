@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>open and close</h1>
+    </center>
+
+    <button onclick="openwindow();">open window</button>
+    <button onclick="closewindow();">close window</button>
+
+    <script>
+        let mywindow;
+        let windowprops = "width=300,height=300,left=300,toolbar=yes,scrollable=yes,resizable=yes";
+
+        function openwindow(){
+            mywindow = window.open("https://google.com","", windowprops);
+        }
+        function closewindow(){
+            mywindow.close();
+        }
+    </script>
+</body>
+</html>

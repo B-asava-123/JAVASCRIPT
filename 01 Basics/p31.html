@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *{
+                margin:0% ;
+                padding: 0%;
+            }
+            body{
+                background-color: black;
+                color: white; 
+            }
+         
+        </style>
+    </head>
+    <body>
+       <center>
+        <h1>SCOPE</h1>
+       </center> 
+       <hr>
+
+       <script>
+
+    /*   var is weeker signal and always have global variable */
+    // /* let and const are local variable */
+
+    let x =15;
+    if(x>10)
+    {
+        var a =155;
+        let b = 200;
+        const c = 300;
+
+        document.write(`<h3> LOCAL X  (block scope) = ${x} </h3>`);
+        document.write(`<h3> LOCAL A  (block scope) = ${a} </h3>`);
+        document.write(`<h3> LOCAL B  (block scope) = ${b} </h3>`);
+        document.write(`<h3> LOCAL C  (block scope) = ${c} </h3>`);
+    }
+
+        document.write(`<h3> LOCAL X  (block scope) = ${x} </h3>`);
+        document.write(`<h3> LOCAL A  (block scope) = ${a} </h3>`);
+        document.write(`<h3> LOCAL B  (block scope) = ${b} </h3>`);
+        document.write(`<h3> LOCAL C  (block scope) = ${c} </h3>`);
+       </script>
+
+    </body>
+</html>
